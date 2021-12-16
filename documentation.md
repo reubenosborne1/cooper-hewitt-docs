@@ -3,8 +3,11 @@
 ## Quick links:
 - [Object](#object)
 - [Agent](#agent)
+- [Nested Queries](#nested-queries)
+- [Aggregations](#aggregations)
 - [Pagination](#pagination)
 - [Fragments](#fragments)
+- [Error Handling](#error-handling)
 ## Introduction
 GraphQL queries follow this basic structure:
 ```
@@ -101,15 +104,17 @@ aggregations: [field,field]
 
 _general: string
 
+agentId: string
 creationYear: {from:YYYY, to:YYYYY}
 culture: string
 datatype: string
 department : string
-departmentID: string
+departmentId: string
 dynasty: string
 identifier: string
 id: string
 maker: string
+makerId: string
 period: string
 reign: string
 summary: string
@@ -239,6 +244,107 @@ role
 vocation
 ```
 
+## Nested Queries
+Nested queries allow you to query entities that are linked, for example the agents associated with an object record. This also allows you to specify the fields you want for both entities. The nested queries also allow arguments to be passed, but this will be in a reduced format.
+### object.agent
+Find agents linked to an object who have the role 'Designer'.
+```
+{
+  object {
+    id
+    agent (role: "Designer") {
+      id
+      name
+    }
+  }
+}
+```
+#### Nested Arguments
+```
+size
+role
+``` 
+
+### agent.object
+Find what objects a specific agent is linked with.
+```
+{
+  agent(name: "Frank Lloyd Wright") {
+    id
+    object {
+      id
+      summary
+    }
+  }
+}
+
+```
+### Nested Arguments
+```
+size
+page
+```
+## Aggregations
+The aggregation data can be found in the response's extension block. Here is an example response for aggregating on an object.departments, it names the aggregation after the field you have used and offers the top 10 results.
+```
+    "aggregations": {
+      "department": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "Drawings, Prints, and Graphic Design Department",
+            "doc_count": 129079
+          },
+          {
+            "key": "Product Design and Decorative Arts Department",
+            "doc_count": 28924
+          },
+          {
+            "key": "Textiles Department",
+            "doc_count": 26275
+          },
+          {
+            "key": "Wallcoverings Department",
+            "doc_count": 9189
+          },
+          {
+            "key": "Exhibitions Department",
+            "doc_count": 2480
+          },
+          {
+            "key": "Archives Department",
+            "doc_count": 800
+          },
+          {
+            "key": "Smithsonian Libraries",
+            "doc_count": 183
+          },
+          {
+            "key": "Digital",
+            "doc_count": 19
+          },
+          {
+            "key": "Registrars Office",
+            "doc_count": 1
+          },
+          {
+            "key": "Training",
+            "doc_count": 1
+          }
+        ]
+      }
+    },
+```
+You can do multiple aggregations:
+```
+{
+  object(aggregations: ["department", "maker"]) {
+    id
+  }
+}
+```
+
 ## Pagination
 
 We are using ES’ built in pagination where the user can set per query the size and the page of the result list.  
@@ -284,4 +390,34 @@ fragment briefObjectFields on Object{
   creation
   department
   summary
+```
+
+## Error Handling
+- For protection against malicious queries the maximum query depth is set to 2 for nested queries.
+```
+{
+  "message": "'anonymous' exceeds maximum operation depth of 2.",
+}
+```
+- Exceeding the rate limit for requests,
+```
+{
+  "message": "API rate limit exceeded"
+}
+```
+- Sending a request with an invalid api key.
+```
+{
+  "message":
+    {
+      "reason":"API Key Invalid"
+      "status_code":403
+    }
+}
+```
+- Attemping to use an aggregation term that is not accepted.
+```
+{
+      "message": "errortest is not a valid key! Please use these keys: ['classification', 'culture', 'datatype', 'department', 'departmentId', 'maker', 'material', 'period', 'place']"
+}
 ```
