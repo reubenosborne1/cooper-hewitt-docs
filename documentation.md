@@ -24,6 +24,35 @@ The resultant data follows the same structure as the query:
   }
 }
 ```
+There is also an extensions block in addition to the data response. This follows the GraphQL specifications and allows us to write more detailed responses, including information regarding pagination and aggregations.
+
+```
+  "extensions": {
+    "aggregations": {
+      "department": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "Drawings, Prints, and Graphic Design Department",
+            "doc_count": 129079
+          },
+          {
+            "key": "Product Design and Decorative Arts Department",
+            "doc_count": 28924
+          },
+          ...
+        ]
+      }
+    },
+    "pagination": {
+      "hits": 196951,
+      "per_page": 10,
+      "current_page": 0,
+      "number_of_pages": 19696
+    }
+  }
+```
 
 ## Breakdown of the Different Entities
 
