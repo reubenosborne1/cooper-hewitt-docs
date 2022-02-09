@@ -3,7 +3,7 @@
 ## Quick links:
 ### Entities: 
 
-- [Agent](#agent)
+- [Agent](#https://github.com/reubenosborne1/cooper-hewitt-docs/agent.md)
 - [Classification](#classificaion)
 - [Department](#department)
 - [Event](#event)
@@ -314,7 +314,6 @@ These are the fields you can query on the object entity:
 {
   object {
     id
-    catalogued
     classification
     creation
     datatype
