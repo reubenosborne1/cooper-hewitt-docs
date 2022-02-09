@@ -16,11 +16,16 @@
 
 
 ### Extras:
-- [Nested Queries](#nested-queries)
-- [Aggregations](#aggregations)
-- [Pagination](#pagination)
-- [Fragments](#fragments)
-- [Error Handling](#error-handling)
+- [Aggregations](/extras/aggregations)
+- [Pagination](/extras/pagination)
+- [Fragments](/extras/fragments)
+- [Error Handling](/extras/error_handling)
+
+### Examples:
+- [Example 1](/examples/example1.md) : All objects made by X
+- [Example 2](/examples/example2.md): All agents who makers
+- [Example 3](/examples/example3.md)
+- [Example 4](/examples/example4.md)
 
 ## Introduction
 GraphQL queries follow this basic structure:
