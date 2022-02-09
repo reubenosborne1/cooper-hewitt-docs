@@ -1,4 +1,4 @@
-# cooper-hewitt-docs to accompany the graphQL 
+# cooper-hewitt-docs to accompany the graphQL API
 
 `documentation.md` contains links to:
   - entity documentation
