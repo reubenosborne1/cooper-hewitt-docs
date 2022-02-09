@@ -22,9 +22,9 @@
 - [Error Handling](/extras/error_handling)
 
 ### Examples:
-- [Example 1](/examples/example1.md): All objects made by X
-- [Example 2](/examples/example2.md): All agents who makers
-- [Example 3](/examples/example3.md): What objects were at this exhibition? 
+- [All objects made by Dieter Rams](/examples/example1.md)
+- [All agents who makers](/examples/example2.md)
+- [What objects were at this exhibition?](/examples/example3.md)
 - [Example 4](/examples/example4.md):
 
 ## Introduction
