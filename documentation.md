@@ -4,14 +4,15 @@
 ### Entities: 
 
 - [Agent](/entities/agent.md)
-- [Classification](#classificaion)
-- [Department](#department)
-- [Event](#event)
-- [Location](#location)
-- [Object](#object)
-- [Package](#package)
-- [Tag](#tag)
-- [Term](#term)
+- [Classification](/entities/classification.md)
+- [Department](/entities/department.md)
+- [Event](/entities/event.md)
+- [Exhibition] (/entities/exhibition.md)
+- [Location](/entities/location.md)
+- [Object](/entities/object.md)
+- [Package](/entities/package.md)
+- [Tag](/entities/tag.md)
+- [Term]/entities/term.md)
 
 
 ### Extras:
