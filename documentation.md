@@ -3,7 +3,7 @@
 ## Quick links:
 ### Entities: 
 
-- [Agent](https://github.com/reubenosborne1/cooper-hewitt-docs/blob/master/demo_notes_19012022.md)
+- [Agent](/entities/agent.md)
 - [Classification](#classificaion)
 - [Department](#department)
 - [Event](#event)
