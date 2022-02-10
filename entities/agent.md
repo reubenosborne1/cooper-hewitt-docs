@@ -27,7 +27,6 @@ These are the fields you can query on the agent entity:
     }
   }
 }
-
 ```
 
 #### Arguments
@@ -77,7 +76,7 @@ name
 You can create aggregations across different fields: 
 ```
 {
-  agent(aggregations:["role"]) {
+  agent(aggregations:["relationship"]) {
      id    
   }
 }

@@ -1,11 +1,13 @@
 ### Department
 
 #### Fields
-These are all the fieds you can query on the Department entity. 
+These are all the fields you can query on the Department entity. 
 ```
 {
   department {
+    collectionsOnlineId
     id
+    identifier
     datatype
     summary
     object {
