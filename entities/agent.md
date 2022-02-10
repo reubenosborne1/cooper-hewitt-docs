@@ -41,7 +41,7 @@ general: string
 
 collectionsOnlineId: string
 date: YYYY
-dateRange: {from:YYYY, to:YYYYY}
+dateRange: {from:YYYY, to:YYYY}
 datatype: string
 description: string
 identifier: string
