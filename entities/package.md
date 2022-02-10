@@ -1,12 +1,13 @@
 ### Package
 
 #### Fields
-These are all the fieds you can query on the Package entity. 
+These are all the fields you can query on the Package entity. 
 ```
 {
   department {
     id
     datatype
+    name
     summary
   }
 }
