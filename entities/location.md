@@ -2,18 +2,24 @@
 ### Location
 
 #### Fields
-These are all the fieds you can query on the Location entity. 
+These are all the fields you can query on the Location entity. 
 ```
 {
   location {
-    id
     datatype
     description
+    id
+    site
     summary
     title
+    object {
+      id 
+      summary
+    }
   }
 }
 ```
+* For the nested queries you can use all the fields available for that entity. For simplicity we have limited this to `id` and `summary` for the docs.
 #### Arguments
 These are all the possible arguments for an location query:
 ```
