@@ -73,8 +73,7 @@ general: string
 
 agentId: string
 agent: string
-year: YYYY
-yearRange: {from:YYYY, to:YYYYY}
+collectionsOnlineId: string
 culture: string
 datatype: string
 department : string
@@ -96,6 +95,8 @@ summary: string
 subject: string
 subjectId: string
 title: string
+year: YYYY
+yearRange: {from:YYYY, to:YYYYY}
 ```
 
 ##### Sorting

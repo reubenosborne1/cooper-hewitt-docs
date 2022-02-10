@@ -32,6 +32,7 @@ sort: [{arg1: order}, {arg2: order}]
 general: string
 
 category: string
+collectionsOnlineId: string
 id: string
 identifier: string
 label: string

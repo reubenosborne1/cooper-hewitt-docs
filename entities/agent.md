@@ -39,6 +39,7 @@ aggregations: [field,field]
 
 general: string
 
+collectionsOnlineId: string
 date: YYYY
 dateRange: {from:YYYY, to:YYYYY}
 datatype: string

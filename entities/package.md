@@ -5,8 +5,9 @@ These are all the fields you can query on the Package entity.
 ```
 {
   department {
-    id
+    collectionsOnlineId
     datatype
+    id
     name
     summary
   }
@@ -18,6 +19,7 @@ These are all the possible arguments for an Package query:
 page
 size
 
+collectionsOnlineId
 id
 summary
 ```

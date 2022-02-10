@@ -18,11 +18,13 @@
 - [Fragments](/extras/fragments)
 - [Error Handling](/extras/error_handling)
 
+
 ### Examples:
-- [All objects made by Dieter Rams](/examples/example1.md)
-- [All agents who makers](/examples/example2.md)
-- [What objects were at this exhibition?](/examples/example3.md)
-- [Example 4](/examples/example4.md):
+- [What Objects did Dieter Rams make between X and Y?](/examples/example1.md)
+- [What Objects were X a Subject of? ](/examples/example2.md)
+- [What exhibitions have been in venue X and what objects were exhibited?](/examples/example3.md)
+- [Get me a X X from X, which was made from X. ](/examples/example4.md):
+- [Example 5](/examples/example5.md):
 
 ## Introduction
 GraphQL queries follow this basic structure:

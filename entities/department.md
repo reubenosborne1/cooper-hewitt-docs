@@ -27,6 +27,7 @@ sort: [{arg1: order}, {arg2: order}]
 
 general: string
 
+collectionsOnlineId:string
 id: string
 summary: string
 ```
