@@ -20,11 +20,11 @@
 
 
 ### Examples:
-- [What Objects did Dieter Rams make between X and Y?](/examples/example1.md)
+- [What Objects did Dieter Rams make in the 60s?](/examples/example1.md)
 - [What Objects were X a Subject of? ](/examples/example2.md)
 - [What exhibitions have been in venue X and what objects were exhibited?](/examples/example3.md)
-- [Get me a X X from X, which was made from X. ](/examples/example4.md):
-- [Example 5](/examples/example5.md):
+- [Get me a X X from X, which was made from X.](/examples/example4.md)
+- [Example 5](/examples/example5.md)
 
 ## Introduction
 GraphQL queries follow this basic structure:
