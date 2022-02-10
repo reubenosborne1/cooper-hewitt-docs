@@ -10,7 +10,6 @@ These are the fields you can query on the object entity:
     classification
     collectionsOnlineId
     culture 
-    datatype
     date 
     department 
     description 
@@ -75,7 +74,6 @@ agentId: string
 agent: string
 collectionsOnlineId: string
 culture: string
-datatype: string
 department : string
 departmentId: string
 displayed: boolean
@@ -129,7 +127,6 @@ You can currently aggregate across these object fields:
 classification
 collector
 culture
-datatype
 department
 departmentID
 maker

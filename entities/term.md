@@ -5,9 +5,8 @@ These are all the fields you can query on the Term entity.
 ```
 {
   term {
-    id
-    datatype
     hierarchy
+    id
     parent
     summary
     term

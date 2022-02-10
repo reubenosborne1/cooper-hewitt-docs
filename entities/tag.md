@@ -7,7 +7,6 @@ These are all the fieds you can query on the Tag entity.
 {
   tag {
     id
-    datatype
     name
     summary
     object {

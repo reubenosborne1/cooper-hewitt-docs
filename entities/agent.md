@@ -9,7 +9,6 @@ These are the fields you can query on the agent entity:
     birth
     classification
     collectionsOnlineId
-    datatype
     death
     description
     dissolved
@@ -42,7 +41,6 @@ general: string
 collectionsOnlineId: string
 date: YYYY
 dateRange: {from:YYYY, to:YYYY}
-datatype: string
 description: string
 identifier: string
 id: string
@@ -84,7 +82,6 @@ You can create aggregations across different fields:
 ```
 You can currently aggregate across these object fields:
 ```
-datatype
 nationality
 relationship
 vocation

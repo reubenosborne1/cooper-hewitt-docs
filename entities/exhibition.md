@@ -7,7 +7,6 @@ These are all the fields you can query on the Exhibition entity.
   exhibition {
     category
     collectionsOnlineId
-    datatype
     id
     identifier
     label

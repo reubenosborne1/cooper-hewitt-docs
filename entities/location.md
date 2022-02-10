@@ -6,7 +6,6 @@ These are all the fields you can query on the Location entity.
 ```
 {
   location {
-    datatype
     description
     id
     site

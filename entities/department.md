@@ -8,7 +8,6 @@ These are all the fields you can query on the Department entity.
     collectionsOnlineId
     id
     identifier
-    datatype
     summary
     object {
         id 
