@@ -7,35 +7,59 @@ These are the fields you can query on the object entity:
 ```
 {
   object {
-    id
     classification
-    creation
+    collectionsOnlineId
+    culture 
     datatype
-    department
-    description
+    date 
+    department 
+    description 
+    exhibition
     identifier
-    inscription
-    legal
-    material
+    id
+    inscription 
+    legal 
+    material 
+    medium 
     measurements
-    medium
-    name
-    note
-    provenance
+    multimedia 
+    name 
+    note 
+    period 
+    provenance 
     status
-    subject
     summary
     title
+
     agent {
-      id
+        id
+        summary
     }
+
+    collector {
+        id
+        summary
+    }
+
+    maker {
+        id
+        summary
+    }
+
+    subject {
+        id
+        summary
+    }
+
     tag {
-      id
+        id
+        summary
     }
   }
 }
 
 ```
+* For the nested queries you can use all the fields available for that entity. For simplicity we have limited this to `id` and `summary` for the docs.
 
 #### Arguments
 These are all the possible arguments for an object query:
@@ -45,21 +69,26 @@ size: int
 sort: [{arg1: order}, {arg2: order}] 
 aggregations: [field,field]
 
-_general: string
+general: string
 
 agentId: string
 agent: string
-creationYear: {from:YYYY, to:YYYYY}
+year: YYYY
+yearRange: {from:YYYY, to:YYYYY}
 culture: string
 datatype: string
 department : string
 departmentId: string
+displayed: boolean
 dynasty: string
+exhibition: string
+exhibitionId: string
 identifier: string
 id: string
 maker: string
 makerId: string
 material: string
+name: string
 period: string
 provenance: string
 reign: string
@@ -67,9 +96,8 @@ summary: string
 subject: string
 subjectId: string
 title: string
-
-
 ```
+
 ##### Sorting
 Example sort by id:
 ```
@@ -79,11 +107,11 @@ Example sort by id:
   }
 }
 ```
-The avaialable sort terms are:
+The available sort terms are:
 ```
 id
 summary
-creationYear
+year
 ```
 
 #### Aggregations
@@ -98,13 +126,16 @@ object(aggregations:["department"]) {
 You can currently aggregate across these object fields:
 ```
 classification
+collector
 culture
 datatype
 department
 departmentID
 maker
 material
+medium
 period
 place
 provenance
+subject
 ```
