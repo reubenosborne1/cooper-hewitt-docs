@@ -6,21 +6,24 @@ These are the fields you can query on the agent entity:
 ```
 {
   agent {
-    id
     birth
     classification
+    collectionsOnlineId
     datatype
     death
-    defunct
     description
+    dissolved
     founded
+    id
     identifier
     name
     nationality
+    role
     summary
     vocation
     object {
       id
+      summary
     }
   }
 }
@@ -35,10 +38,10 @@ size: int
 sort: [{arg1: order}, {arg2: order}] 
 aggregations: [field,field]
 
-_general: string
+general: string
 
-date: {from:YYYY, to:YYYYY}
-
+date: YYYY
+dateRange: {from:YYYY, to:YYYYY}
 datatype: string
 description: string
 identifier: string
@@ -46,7 +49,7 @@ id: string
 name: string
 nationality: string
 summary: string
-role: string
+relationship: string
 vocation: string
 ```
 
@@ -61,11 +64,15 @@ Example sort by id:
 ```
 Then sortable terms are:
 ```
+birth
+death
+forename
+surname
 id
-firstName
-lastName
+name
+
 ```
-loans
+
 #### Aggregations
 You can create aggregations across different fields: 
 ```
@@ -79,6 +86,6 @@ You can currently aggregate across these object fields:
 ```
 datatype
 nationality
-role
+relationship
 vocation
 ```

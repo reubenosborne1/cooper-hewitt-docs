@@ -8,17 +8,25 @@ These are all the fieds you can query on the Department entity.
     id
     datatype
     summary
+    object {
+        id 
+        summary
+    }
   }
 }
 ```
+* For the nested queries you can use all the fields available for that entity. For simplicity we have limited this to `id` and `summary` for the docs.
 #### Arguments
 These are all the possible arguments for an department query:
 ```
-page
-size
+page: int
+size: int
+sort: [{arg1: order}, {arg2: order}] 
 
-id
-summary
+general: string
+
+id: string
+summary: string
 ```
 
 #### Sorting
