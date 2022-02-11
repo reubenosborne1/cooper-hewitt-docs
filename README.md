@@ -24,7 +24,7 @@
 - [Get me all the Objects where "Winslow Homer" is the Subject.](/examples/example2.md)
 - [What Objects were part of 'The Jazz Age' Exhibition and who made them?](/examples/example3.md)
 - [Find me a Wooden chair from the 50s that is on display.](/examples/example4.md)
-- [What Objects are in room 101? ](/examples/example5.md)
+- [Find French Makers and the Objects they made.](/examples/example5.md)
 
 ## Introduction
 GraphQL queries follow this basic structure:
