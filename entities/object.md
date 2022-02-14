@@ -17,7 +17,9 @@ These are the fields you can query on the object entity:
     identifier
     id
     inscription 
-    legal 
+    geography
+    legal
+    location
     material 
     medium 
     measurements
@@ -73,6 +75,7 @@ general: string
 agentId: string
 agent: string
 collectionsOnlineId: string
+country: string
 culture: string
 department : string
 departmentId: string
@@ -80,12 +83,15 @@ displayed: boolean
 dynasty: string
 exhibition: string
 exhibitionId: string
+geography: string
+hasImages: boolean
 identifier: string
 id: string
 maker: string
 makerId: string
 material: string
 name: string
+onDisplay: boolean
 period: string
 provenance: string
 reign: string
