@@ -51,8 +51,6 @@ There is also an extensions block in addition to the data response. This follows
   "extensions": {
     "aggregations": {
       "department": {
-        "doc_count_error_upper_bound": 0,
-        "sum_other_doc_count": 0,
         "buckets": [
           {
             "key": "Drawings, Prints, and Graphic Design Department",
